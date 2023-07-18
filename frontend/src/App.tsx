@@ -1,4 +1,4 @@
-import './App.css'
+import { sampleProducts } from "./data"
 
 function App() {
   return (
@@ -7,7 +7,9 @@ function App() {
         Ts Amazona
       </header>
       <main>
-
+        {sampleProducts.map((product) =>(
+          <h2 key={product.slug}>{product.name}</h2>
+        ))}
       </main>
       <footer>
         All rights reserved
