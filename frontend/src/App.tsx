@@ -1,4 +1,4 @@
-import { sampleProducts } from "./data"
+import { Outlet } from "react-router-dom"
 
 function App() {
   return (
@@ -18,11 +18,7 @@ function App() {
         </nav>
       </header>
       <main className="max-w-7xl mx-auto p-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {sampleProducts.map((product) =>(
-            <h2 key={product.slug}>{product.name}</h2>
-          ))}
-        </div>
+       <Outlet/>
       </main>
       <footer className="bg-amazon_blue-light">
         <div className="text-center p-5">
